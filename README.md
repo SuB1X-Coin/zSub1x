@@ -11,7 +11,7 @@ zSub1x is a cutting edge cryptocurrency, with many features not available in mos
   technology used to secure the network and provide the above features, each Masternode is secured
   with a collateral of 10K SUB1X.
 
-More information at [zSub1xCoin.com](http://www.zsub1xcoin.com) Visit our ANN thread at [BitcoinTalk](http://www.bitcointalk.org/index.php)
+More information at [Sub1x.org](https://sub1x.org/) Visit our ANN thread at [BitcoinTalk](http://www.bitcointalk.org/index.php)
 
 
 ### Coin Specs
