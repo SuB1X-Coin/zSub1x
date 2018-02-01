@@ -1,0 +1,26 @@
+[Unit]
+Description=zSub1x's distributed currency daemon
+After=network.target
+
+[Service]
+User=zsub1x
+Group=zsub1x
+
+Type=forking
+PIDFile=/var/lib/zsub1xd/zsub1xd.pid
+
+ExecStart=/usr/bin/zsub1xd -daemon -pid=/var/lib/zsub1xd/zsub1xd.pid \
+          -conf=/etc/zsub1x/zsub1x.conf -datadir=/var/lib/zsub1xd
+
+ExecStop=-/usr/bin/zsub1x-cli -conf=/etc/zsub1x/zsub1x.conf \
+         -datadir=/var/lib/zsub1xd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

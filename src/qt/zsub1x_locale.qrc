@@ -1,0 +1,30 @@
+<!DOCTYPE RCC><RCC version="1.0">
+    <qresource prefix="/translations">
+        <file alias="bg">locale/zsub1x_bg.qm</file>
+        <file alias="ca">locale/zsub1x_ca.qm</file>
+        <file alias="cs">locale/zsub1x_cs.qm</file>
+        <file alias="da">locale/zsub1x_da.qm</file>
+        <file alias="de">locale/zsub1x_de.qm</file>
+        <file alias="en">locale/zsub1x_en.qm</file>
+        <file alias="en_US">locale/zsub1x_en_US.qm</file>
+        <file alias="es">locale/zsub1x_es.qm</file>
+        <file alias="fi">locale/zsub1x_fi.qm</file>
+        <file alias="fr_FR">locale/zsub1x_fr_FR.qm</file>
+        <file alias="hr">locale/zsub1x_hr.qm</file>
+        <file alias="it">locale/zsub1x_it.qm</file>
+        <file alias="ja">locale/zsub1x_ja.qm</file>
+        <file alias="ko_KR">locale/zsub1x_ko_KR.qm</file>
+        <file alias="nl">locale/zsub1x_nl.qm</file>
+        <file alias="pl">locale/zsub1x_pl.qm</file>
+        <file alias="pt">locale/zsub1x_pt.qm</file>
+        <file alias="pt_BR">locale/zsub1x_pt_BR.qm</file>
+        <file alias="ro_RO">locale/zsub1x_ro_RO.qm</file>
+        <file alias="ru">locale/zsub1x_ru.qm</file>
+        <file alias="sk">locale/zsub1x_sk.qm</file>
+        <file alias="sv">locale/zsub1x_sv.qm</file>
+        <file alias="tr">locale/zsub1x_tr.qm</file>
+        <file alias="uk">locale/zsub1x_uk.qm</file>
+        <file alias="zh_CN">locale/zsub1x_zh_CN.qm</file>
+        <file alias="zh_TW">locale/zsub1x_zh_TW.qm</file>
+    </qresource>
+</RCC>

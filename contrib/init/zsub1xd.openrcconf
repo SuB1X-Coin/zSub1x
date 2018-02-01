@@ -1,0 +1,26 @@
+# /etc/conf.d/zsub1xd: config file for /etc/init.d/zsub1xd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/zsub1x/zsub1x.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/zsub1xd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/zsub1xd.pid"
+
+# Where to write zsub1xd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/zsub1xd"
+
+# User and group to own zsub1xd process
+#BITCOIND_USER="zsub1x"
+#BITCOIND_GROUP="zsub1x"
+
+# Path to zsub1xd executable
+#BITCOIND_BIN="/usr/bin/zsub1xd"
+
+# Nice value to run zsub1xd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

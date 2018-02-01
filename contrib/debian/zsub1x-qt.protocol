@@ -1,0 +1,11 @@
+[Protocol]
+exec=zsub1x-qt '%u'
+protocol=zsub1x
+input=none
+output=none
+helper=true
+listing=
+reading=false
+writing=false
+makedir=false
+deleting=false

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=zSub1x
+Comment=zSub1x P2P Cryptocurrency
+Comment[fr]=zSub1x, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=zSub1x, eşten eşe kriptografik sanal para birimi
+Exec=zsub1x-qt %u
+Terminal=false
+Type=Application
+Icon=zsub1x128
+MimeType=x-scheme-handler/zsub1x;
+Categories=Office;Finance;
