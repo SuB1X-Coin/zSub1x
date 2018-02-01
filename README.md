@@ -31,7 +31,7 @@ More information at [Sub1x.org](https://sub1x.org/) Visit our ANN thread at [Bit
 <th colspan=4>PoW Phase</th>
 <tr><th>Block Height</th><th>Reward Amount</th><th>Notes</th><th>Duration (Days)</th></tr>
 <tr><td>1</td><td>11200 SUB1X</td><td>Initial Premine</td><td>0 Days</td></tr>
-<tr><td>2-3029</td><td>0.05 SUB1X</td><td rowspan=1>Open Mining</td><td rowspan=1> Approx 180 Days</td></tr>
+<tr><td>2-3029</td><td>0.05 SUB1X</td><td rowspan=1>Closed Mining</td><td rowspan=1> Approx 180 Days</td></tr>
 <tr><th colspan=4>PoS Phase</th></tr>
 <tr><th>Block Height</th><th colspan=3>Reward Amount</th></tr>
 <tr><td>259201-Infinite</td><td colspan=2>Masternodes: 80%</td><td>Stakers: 20%</td></tr>
