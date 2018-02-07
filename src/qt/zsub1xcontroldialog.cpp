@@ -4,7 +4,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "zsubcontroldialog.h"
-#include "ui_zsubcontroldialog.h"
+#include "ui_zsub1xcontroldialog.h"
 
 #include "main.h"
 #include "walletmodel.h"
