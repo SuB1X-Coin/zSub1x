@@ -248,15 +248,13 @@ public:
         genesis.nTime = 1515616140;
         genesis.nNonce = 79855;
 
-	    hashGenesisBlock = genesis.GetHash();
+	hashGenesisBlock = genesis.GetHash();
         //assert(hashGenesisBlock == uint256("0x000007cff63ef602a51bf074e384b3516f0dd202f14d52f7c8c9b1af9423ab2e"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
-        vSeeds.push_back(CDNSSeedData("209.250.241.176", "209.250.241.176"));         // Single node address
-        vSeeds.push_back(CDNSSeedData("209.250.243.131", "209.250.243.131"));       // Single node address
-        vSeeds.push_back(CDNSSeedData("45.77.239.108", "45.77.239.108"));       // Single node address
-
+        vSeeds.push_back(CDNSSeedData("seeds-testnet.sub1x.org", "seeds-testnet.sub1x.org"));               // DNS seeds
+        vSeeds.push_back(CDNSSeedData("sub1x-testnet.seeds.mn.zone", "sub1x-testnet.seeds.mn.zone"));       // DNS seeds
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 139); // Testnet zsub1x addresses start with 'x' or 'y'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 19);  // Testnet zsub1x script addresses start with '8' or '9'
