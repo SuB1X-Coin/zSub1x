@@ -30,9 +30,9 @@ int GetBudgetPaymentCycleBlocks()
 {
     // Amount of blocks in a months period of time (using 1 minutes per) = (60*24*30)
     if (Params().NetworkID() == CBaseChainParams::MAIN) return 43200;
-    //for testing purposes
 
-    return 144; //ten times per day
+    //for testing purposes
+    return 480; //three times per day
 }
 
 bool IsBudgetCollateralValid(uint256 nTxCollateralHash, uint256 nExpectedHash, std::string& strError, int64_t& nTime, int& nConf)
@@ -835,10 +835,11 @@ CAmount CBudgetManager::GetTotalBudget(int nHeight)
     if (chainActive.Tip() == NULL) return 0;
 
     if (Params().NetworkID() == CBaseChainParams::TESTNET) {
-        CAmount nSubsidy = 500 * COIN;
-        return ((nSubsidy / 100) * 10) * 146;
+        CAmount nSubsidy = 0.05 * COIN;       // BLOCK REWARD
+        return ((nSubsidy / 100) * 20) * 482; // 20% of the block reward are added to the budget as extra inflation
     }
-	return 0;
+
+    return 0;
 }
 
 void CBudgetManager::NewBlock()
@@ -1381,7 +1382,7 @@ bool CBudgetProposal::IsValid(std::string& strError, bool fCheckCollateral)
         return false;
     }
 
-    if (nAmount < 10 * COIN) {
+    if (nAmount < 0.04 * COIN) {
         strError = "Proposal " + strProposalName + ": Invalid nAmount";
         return false;
     }
