@@ -160,11 +160,8 @@ public:
         assert(hashGenesisBlock == uint256("0x00000a0177b7685aa71168550959d11f1c183b96fff0c0d87f92b2fca5ff1bea"));
         assert(genesis.hashMerkleRoot == uint256("0x15f6a85ff76e304d1114a26df10cd06c8c99e729b430a769294f62e1357f0297"));
 		
-		//vSeeds.push_back(CDNSSeedData("1.1.1.1", "1.1.1.1"));       // Primary DNS Seeder
-        vSeeds.push_back(CDNSSeedData("209.250.241.176", "209.250.241.176"));         // Single node address
-        vSeeds.push_back(CDNSSeedData("209.250.243.131", "209.250.243.131"));       // Single node address
-        vSeeds.push_back(CDNSSeedData("45.77.239.108", "45.77.239.108"));       // Single node address
-		vSeeds.push_back(CDNSSeedData("107.191.44.102", "107.191.44.102"));       // Single node address
+	vSeeds.push_back(CDNSSeedData("seeds.sub1x.org", "seeds.sub1x.org"));       // Primary DNS Seeder
+	vSeeds.push_back(CDNSSeedData("sub1x.mnseeds.com", "sub1x.mnseeds.com"));   // Additional DNS seeder, by mn.zone
 		
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 80);
@@ -188,7 +185,7 @@ public:
         fHeadersFirstSyncingActive = false;
 
         nPoolMaxTransactions = 3;
-        strSporkKey = "0459eede7626441f7802af2736cb3a4aeb3e1f95070cde39d068a4f16525ee8fdd3c075f29f9e115aeb91952239194aa6ac19765574fed8a0d7f174f2b450e9630";
+        strSporkKey = "043a9030e0dd8e0f64469982581c305b083deb16823ee9a30d624f1bb7421ec78d5100c6fc2997ec2d28d2d6bcd3fc45f482f9ebe8d2aaf0a8cb4a98022f2afe89";
         strObfuscationPoolDummyAddress = "ZJUq47KtCqh7X54cqcWVZ2R3SVEFAbKHye";
         nStartMasternodePayments = 1516371317; //Wed, 25 Jun 2014 20:36:16 GMT
 
@@ -255,8 +252,8 @@ public:
 
         vFixedSeeds.clear();
         vSeeds.clear();
-        vSeeds.push_back(CDNSSeedData("seeds-testnet.sub1x.org", "seeds-testnet.sub1x.org"));               // DNS seeds
-        vSeeds.push_back(CDNSSeedData("sub1x-testnet.seeds.mn.zone", "sub1x-testnet.seeds.mn.zone"));       // DNS seeds
+        vSeeds.push_back(CDNSSeedData("seeds-testnet.sub1x.org", "seeds-testnet.sub1x.org"));           // DNS seeds
+        vSeeds.push_back(CDNSSeedData("sub1x-testnet.mnseeds.com", "sub1x-testnet.mnseeds.com"));       // DNS seeds by mn.zone
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 139); // Testnet zsub1x addresses start with 'x' or 'y'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 19);  // Testnet zsub1x script addresses start with '8' or '9'
