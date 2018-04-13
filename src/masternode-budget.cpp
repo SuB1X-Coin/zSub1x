@@ -31,8 +31,7 @@ int GetBudgetPaymentCycleBlocks()
     // Amount of blocks in a months period of time (using 1 minutes per) = (60*24*30)
     if (Params().NetworkID() == CBaseChainParams::MAIN) return 43200;
 
-    //for testing purposes
-    return 480; //three times per day
+    return 720; // twice a day in testnet
 }
 
 bool IsBudgetCollateralValid(uint256 nTxCollateralHash, uint256 nExpectedHash, std::string& strError, int64_t& nTime, int& nConf)
@@ -832,14 +831,23 @@ std::string CBudgetManager::GetRequiredPaymentsString(int nBlockHeight)
 
 CAmount CBudgetManager::GetTotalBudget(int nHeight)
 {
-    if (chainActive.Tip() == NULL) return 0;
+    CAmount nSubsidy = 0;
+    CAmount totalBudget = 0;
+    if (chainActive.Tip() == NULL) return totalBudget;
+
+    nSubsidy = GetBlockValue(nHeight);
+    LogPrint("masternode","CBudgetManager::GetTotalBudget(%d): GetBlockValue(%d) returned %f COINs\n", nHeight, nHeight, nSubsidy / COIN);
+
+    // Define governance budget as 20% of the block value
+    totalBudget = ((nSubsidy / 100) * 20) * GetBudgetPaymentCycleBlocks();
 
     if (Params().NetworkID() == CBaseChainParams::TESTNET) {
-        CAmount nSubsidy = 0.05 * COIN;       // BLOCK REWARD
-        return ((nSubsidy / 100) * 20) * 482; // 20% of the block reward are added to the budget as extra inflation
+      // Increase the budget in testnet 10x to make it more exciting
+      totalBudget = totalBudget * 10;
     }
 
-    return 0;
+    LogPrint("masternode","CBudgetManager::GetTotalBudget(%d) returning %f COINs\n", nHeight, totalBudget / COIN);
+    return totalBudget;
 }
 
 void CBudgetManager::NewBlock()
@@ -1420,7 +1428,7 @@ bool CBudgetProposal::IsValid(std::string& strError, bool fCheckCollateral)
 
     //can only pay out 10% of the possible coins (min value of coins)
     if (nAmount > budget.GetTotalBudget(nBlockStart)) {
-        strError = "Proposal " + strProposalName + ": Payment more than max";
+        strError = "Proposal " + strProposalName + ": Payment more than max (" + std::to_string(budget.GetTotalBudget(nBlockStart) / COIN) + ")";
         return false;
     }
 
