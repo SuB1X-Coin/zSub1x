@@ -12,6 +12,7 @@ src/zsub1x-cli
 src/zsub1x-tx
 src/test/test_zsub1x
 src/qt/test/test_zsub1x-qt
+src/leveldb/build_config.mk
 
 # autoreconf
 Makefile.in
@@ -128,3 +129,5 @@ CMakeLists.txt
 cmake-build-debug
 config.log
 config.status
+
+background.tiff*
