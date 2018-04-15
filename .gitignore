@@ -129,3 +129,5 @@ CMakeLists.txt
 cmake-build-debug
 config.log
 config.status
+
+background.tiff*
