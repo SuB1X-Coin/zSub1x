@@ -226,10 +226,10 @@ public:
     {
         networkID = CBaseChainParams::TESTNET;
         strNetworkID = "test";
-        pchMessageStart[0] = 0x43;
-        pchMessageStart[1] = 0x76;
-        pchMessageStart[2] = 0x65;
-        pchMessageStart[3] = 0xba;
+        pchMessageStart[0] = 0x04;
+        pchMessageStart[1] = 0x95;
+        pchMessageStart[2] = 0xfd;
+        pchMessageStart[3] = 0xcf;
         // vAlertPubKey = ParseHex("042292b1f401860eea99e1a8a103effbd7e1c013a59a1a3a0c91c9d1997a0bc6f338567278c11344802838c107055bf7c1641eaed61e879245c255a4f5be5746fc");
         vAlertPubKey = ParseHex("04b2bb481c5e01f5e134ca56c1eb9498ffed660238e09851e392f0222d26801637d0f9b0b75367227746f39ef2b5fc6538d570aaf8ea9fdd766f0f091ebd0e47f5");
 
