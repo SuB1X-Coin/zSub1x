@@ -233,7 +233,7 @@ public:
         // vAlertPubKey = ParseHex("042292b1f401860eea99e1a8a103effbd7e1c013a59a1a3a0c91c9d1997a0bc6f338567278c11344802838c107055bf7c1641eaed61e879245c255a4f5be5746fc");
         vAlertPubKey = ParseHex("04b2bb481c5e01f5e134ca56c1eb9498ffed660238e09851e392f0222d26801637d0f9b0b75367227746f39ef2b5fc6538d570aaf8ea9fdd766f0f091ebd0e47f5");
 
-        nDefaultPort = 51434;
+        nDefaultPort = 50005;
         nEnforceBlockUpgradeMajority = 51;
         nRejectBlockOutdatedMajority = 75;
         nToCheckBlockUpgradeMajority = 100;
@@ -328,7 +328,7 @@ public:
         genesis.nNonce = 732084;
 
         hashGenesisBlock = genesis.GetHash();
-        nDefaultPort = 51436;
+        nDefaultPort = 50006;
         //assert(hashGenesisBlock == uint256("0x000008415bdca132b70cf161ecc548e5d0150fd6634a381ee2e99bb8bb77dbb3"));
 
         vFixedSeeds.clear(); //! Testnet mode doesn't have any fixed seeds.

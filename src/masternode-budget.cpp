@@ -29,6 +29,10 @@ int nSubmittedFinalBudget;
 
 int GetBudgetPaymentCycleBlocks()
 {
+    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    // DON'T CHANGE THESE BUDGET PERIODS AFTER A PROPOSAL HAS BEEN PAID
+    // NEW WALLETS WON'T RECOGNIZE THE PAID BLOCK AND WILL FORK, UNLESS YOU DO IT BASED ON HEIGHT
+    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     // Amount of blocks in a months period of time (using 1 minutes per) = (60*24*30)
     if (Params().NetworkID() == CBaseChainParams::MAIN) return 43200;
 
